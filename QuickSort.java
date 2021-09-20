@@ -23,26 +23,7 @@ public class QuickSort
         return mass;
     }
 
-    private int[] sort(int mass[]){
+    public int[] sort(int mass[]){
         return quickSort(mass, 0, mass.length - 1);
-    }
-
-    private static void measureTime(Runnable task) {
-        long startTime = System.currentTimeMillis();
-        task.run();
-        long elapsed = System.currentTimeMillis() - startTime;
-        System.out.println("Затраченное время: " + elapsed + " ms");
-    }
-
-    public static void main(String[] args) {
-        int mass[] = new int[100000];
-        for (int i = 0; i < mass.length; i++) {
-            mass[i] = i;
-        }
-
-        System.out.println("Quick sort");
-        measureTime(() -> new QuickSort().sort(mass));
-        System.out.println("Bubble sort");
-        measureTime(() -> new BubbleSort().sort(mass));
     }
 }
