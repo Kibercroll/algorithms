@@ -1,10 +1,4 @@
 public class BubbleSort {
-    public static void main(String[] args) {
-        BubbleSort meth = new BubbleSort();
-        int mass[] = {1,10,2,22,33,3,44,5,8976,12312432,12};
-        meth.showMassive(meth.sort(mass));
-    }
-
     public int[] sort(int mass[]){
         int count = 0;
         int result[];
@@ -21,10 +15,5 @@ public class BubbleSort {
         }
         result = mass;
         return result;
-    }
-    public void showMassive(int massive[]){
-        for (int i = 0; i < massive.length; i++) {
-            System.out.print(massive[i] + " ");
-        }
     }
 }
